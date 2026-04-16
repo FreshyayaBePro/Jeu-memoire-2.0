@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeu Mémoire V2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="assets/logo.png" alt="Logo Institut" id="logo">
+    <div>
+       <h1>MemoryGame</h1>
+    </div>
+    
+            <button onclick="toggleTheme()">🌙 / ☀️</button>
+  </header>
+
+  <section id="start-screen">
+    <form id="start-form">
+      <label for="player-name">Nom du joueur :</label>
+      <input type="text" id="player-name" required>
+
+      <label for="image-set">Choix des images :</label>
+      <select id="image-set">
+        <option value="animaux">Animaux</option>
+        <option value="fruits">Fruits</option>
+        <option value="formes">Formes</option>
+      </select>
+
+      <label for="difficulty">Niveau :</label>
+      <select id="difficulty">
+        <option value="2">Facile</option>
+        <option value="4">Moyen</option>
+        <option value="6">Difficile</option>
+      </select>
+
+      <button type="submit">Démarrer la partie</button>
+    </form>
+  </section>
+
+  <section id="game-section" class="hidden">
+    <div id="info-bar">
+      <div>Coups : <span id="click-count">0</span></div>
+      <div>Score : <span id="score-value">0</span></div>
+    </div>
+    <div id="game-board"></div>
+  </section>
+
+  
+
+  <section id="victory-message" class="hidden">
+    <h2 id="message-text"></h2>
+    <p>Bravo <span id="player-name-display"></span> !</p>
+    <button onclick="location.reload()">Rejouer</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
